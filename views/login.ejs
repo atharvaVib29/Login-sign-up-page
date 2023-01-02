@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/b5b7c6b9e8.js" crossorigin="anonymous"></script>
+<body>
+    
+<% if(messages.error) {%>
+    <%= messages.error %>
+<% } %>
+<form action="/login" method="POST" class="form">
+    <i class="fa-solid fa-user fa-3x" id="usericon"></i>
+   <div class="input">
+       <span><i class="fa-solid fa-envelope"></i></span>
+       <input type="email" id="email" name="email" placeholder="Email id" required>
+   </div>
+   <div class="input">
+       <span><i class="fa-solid fa-lock"></i></span>
+       <input type="password" id="password" name="password" placeholder="password" required>
+   </div>
+   <div class="btn"><button type="submit" class="loginBtn"><i class="fa-solid fa-right-to-bracket"></i> Login</button></div>
+   <a href="/register">Register</a>
+</form>
+
+</body>
